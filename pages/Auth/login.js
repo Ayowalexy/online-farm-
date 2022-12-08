@@ -126,11 +126,11 @@ const Login = () => {
 
                 </VStack>
 
-                <HStack alignSelf='flex-end'>
+                {/* <HStack alignSelf='flex-end'>
                     <Link href='/Auth/forgot-password'>
                         <Text fontFamily='Poppins' textAlign='left' fontWeight={500} padding='10px 0px' color='#69ACD1'>Forgot Password</Text>
                     </Link>
-                </HStack>
+                </HStack> */}
                 <Button
                     outline='none'
                     color='#fff'

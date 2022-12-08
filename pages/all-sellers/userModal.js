@@ -63,7 +63,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                             fontSize={'20px'}
                             fontWeight={700}
                         >
-                            {user.full_name}
+                            {user?.full_name}
                         </Text>
                     </VStack>
                     <VStack
@@ -77,7 +77,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                             fontSize={'20px'}
                             fontWeight={700}
                         >
-                            {user.email}
+                            {user?.email}
                         </Text>
                     </VStack>
                     <VStack
@@ -91,7 +91,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                             fontSize={'20px'}
                             fontWeight={700}
                         >
-                            {user.phone}
+                            {user?.phone}
                         </Text>
                     </VStack>
                     <VStack
@@ -105,7 +105,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                             fontSize={'20px'}
                             fontWeight={700}
                         >
-                            {moment(user.createdAt).format('MMMM Do YYYY, h:mm:ss a')}
+                            {moment(user?.createdAt).format('MMMM Do YYYY, h:mm:ss a')}
                         </Text>
                     </VStack>
                     <VStack
@@ -119,7 +119,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                             fontSize={'20px'}
                             fontWeight={700}
                         >
-                            {user.status}
+                            {user?.status}
                         </Text>
                     </VStack>
                     <VStack
@@ -147,7 +147,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                             fontSize={'20px'}
                             fontWeight={700}
                         >
-                            {user.role}
+                            {user?.role}
                         </Text>
                     </VStack>
 
@@ -176,14 +176,14 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                                 colorScheme='blue' mr={3}
                                 onClick={() => {
                                     const status = {
-                                        status: user["status"] === 'deactivate' ? 'active' : 'deactivate',
+                                        status: user?.status === 'deactivate' ? 'active' : 'deactivate',
 
                                     }
                                     handleStatus(status)
                                 }}
                             >
                                 {
-                                    user.status === 'deactivate'
+                                    user?.status === 'deactivate'
                                         ? 'Activate'
                                         : 'Deactivate'
                                 }
@@ -199,7 +199,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                                 height='46px'
                                 onClick={() => {
                                     const status = {
-                                        status: user["status"] === 'suspended' ? 'active' : 'suspended',
+                                        status: user?.status === 'suspended' ? 'active' : 'suspended',
 
                                     }
                                     handleStatus(status)
@@ -207,7 +207,7 @@ const UserModal = ({ user, isOpen, setIsOpen }) => {
                                 border='1px solid #D5DAE1'
                                 colorScheme='blue' mr={3}>
                                 {
-                                    user.status === 'suspended'
+                                    user?.status === 'suspended'
                                         ? 'Activate'
                                         : 'Suspended'
                                 }

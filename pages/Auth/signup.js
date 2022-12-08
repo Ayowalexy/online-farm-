@@ -71,7 +71,7 @@ const Signup = () => {
         onSubmit: async (values) => {
             delete values.confirm_password
             console.log('sending')
-            await dispatch(signup({ ...values, role: 'admin' })).then(res => {
+            await dispatch(signup({ ...values, role: 'seller' })).then(res => {
                 
                 if(res.meta.requestStatus === 'fulfilled'){
                     router.push('/Auth/login')
