@@ -1,8 +1,10 @@
+import axios from "axios";
 import { createSlice } from "@reduxjs/toolkit";
 import {
    login,
    signup
 } from "./thunkActions";
+
 
 const initialState = {
     loading: false,
